@@ -1,6 +1,7 @@
 version: "3.9"
 services:
   mx-puppet-discord:
+    image: marcpartensky/mx-puppet-discord
     restart: unless-stopped
     build:
       context: .
