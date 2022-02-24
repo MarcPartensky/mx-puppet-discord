@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  mx-puppet-discord:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./config.yml:/data/config.yaml
+      - ./registration.yml:/data/discord-registration.yaml
