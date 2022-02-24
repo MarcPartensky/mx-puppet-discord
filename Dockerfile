@@ -57,6 +57,7 @@ WORKDIR /opt/mx-puppet-discord
 COPY docker-run.sh ./
 COPY --from=builder /opt/mx-puppet-discord/node_modules/ ./node_modules/
 COPY --from=builder /opt/mx-puppet-discord/build/ ./build/
+EXPOSE 8434
 
 # change workdir to /data so relative paths in the config.yaml
 # point to the persisten volume
