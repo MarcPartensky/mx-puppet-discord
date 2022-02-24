@@ -6,5 +6,6 @@ services:
       context: .
       dockerfile: ./Dockerfile
     volumes:
-      - ./config.yml:/data/config.yaml
-      - ./registration.yml:/data/discord-registration.yaml
+      - mx-puppet-discord:/data
+volumes:
+  mx-puppet-discord:
